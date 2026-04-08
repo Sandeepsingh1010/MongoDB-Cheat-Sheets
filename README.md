@@ -19,6 +19,7 @@ MongoDB-Cheat-Sheets/
 		update-delete-and-upsert.md
 	queries/
 		projection-logical-and-comparison.md
+        
 		membership-mod-and-range.md
 		null-and-array-operators.md
 	troubleshooting/
