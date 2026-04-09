@@ -12,7 +12,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 40 — PRACTICE CHALLENGES
+// PRACTICE CHALLENGES
 // ================================================================
 // Try these yourself. Solutions with feedback are provided below.
 //
@@ -76,3 +76,17 @@ db.students.find({"address.city":"Toronto"}).pretty();
 // D) Group by course and calculate average age per course
 //
 // E) Sort students by age descending and limit to top 3
+
+
+db.restaurant.aggregate(
+  {"$unwind":"$reviews"},
+  {
+    "$group":{
+      "_id":"$name",
+      "maxRating":{"$max":"$reviews.rating"},
+      "minRating":{"$min":"$reviews.rating"},
+      "avgRating":{"$avg":"$reviews.rating"}
+    }
+  },
+  {"$sort":{"maxRating":-1}}
+)

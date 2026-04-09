@@ -12,7 +12,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 29 — COUNT DOCUMENTS
+// SECTION 5.1 — COUNT DOCUMENTS
 // ================================================================
 // Similar to:
 // SELECT COUNT(*) FROM students;
@@ -21,14 +21,14 @@ db.students.countDocuments({});
 
 
 // ================================================================
-// SECTION 30 — COUNT WITH A CONDITION
+// SECTION 5.2 — COUNT WITH A CONDITION
 // ================================================================
 db.students.countDocuments({ major: "Computer Science" });
 
 
 
 // ================================================================
-// SECTION 31 — CREATE ANOTHER COLLECTION FOR RELATION-LIKE THINKING
+// SECTION 5.3 — CREATE ANOTHER COLLECTION FOR RELATION-LIKE THINKING
 // ================================================================
 // MongoDB is not relational in the same way as SQL,
 // but you can still model related data.
@@ -60,7 +60,7 @@ db.courses.find({}).pretty();
 
 
 // ================================================================
-// SECTION 32 — EMBEDDING RELATED DATA
+// SECTION 5.4 — EMBEDDING RELATED DATA
 // ================================================================
 // One common MongoDB pattern is EMBEDDING related data
 // inside a document instead of splitting everything into tables.
@@ -83,7 +83,7 @@ db.students.find({ name: "Ali" }).pretty();
 
 
 // ================================================================
-// SECTION 33 — QUERY INSIDE EMBEDDED ARRAY OF OBJECTS
+// SECTION 5.5 — QUERY INSIDE EMBEDDED ARRAY OF OBJECTS
 // ================================================================
 // Find students taking COMP214.
 db.students.find({

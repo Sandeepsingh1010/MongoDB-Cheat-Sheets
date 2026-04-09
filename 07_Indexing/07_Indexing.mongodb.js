@@ -12,7 +12,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 38 — CREATE AN INDEX
+// SECTION 7.1 — CREATE AN INDEX
 // ================================================================
 // Indexes improve query performance.
 //
@@ -23,6 +23,6 @@ db.students.createIndex({ major: 1 });
 
 
 // ================================================================
-// SECTION 39 — VIEW INDEXES
+// SECTION 7.2 — VIEW INDEXES
 // ================================================================
 db.students.getIndexes();

@@ -12,7 +12,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 17 — QUERY INSIDE NESTED OBJECTS
+// SECTION 3.1 — QUERY INSIDE NESTED OBJECTS
 // ================================================================
 // Dot notation lets you query nested fields.
 //
@@ -26,7 +26,7 @@ db.students.find({ address: { city: "Toronto" } })
 
 
 // ================================================================
-// SECTION 18 — QUERY ARRAYS
+// SECTION 3.2 — QUERY ARRAYS
 // ================================================================
 // This finds documents where the skills array contains "SQL".
 db.students.find({ skills: "SQL" }).pretty();

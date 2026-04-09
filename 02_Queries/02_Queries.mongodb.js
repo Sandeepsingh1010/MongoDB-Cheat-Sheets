@@ -12,7 +12,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 8 — BASIC FILTERING
+// SECTION 2.1 — BASIC FILTERING
 // ================================================================
 // In MongoDB, find({ condition }) is like SQL WHERE.
 //
@@ -23,7 +23,7 @@ db.students.find({ major: "Computer Science" }).pretty();
 
 
 // ================================================================
-// SECTION 9 — FILTER BY NUMBER COMPARISON
+// SECTION 2.2 — FILTER BY NUMBER COMPARISON
 // ================================================================
 // MongoDB operators:
 // - $gt  = greater than
@@ -38,7 +38,7 @@ db.students.find({ age: { $gt: 20 } });
 
 
 // ================================================================
-// SECTION 10 — FILTER WITH MULTIPLE CONDITIONS
+// SECTION 2.3 — FILTER WITH MULTIPLE CONDITIONS
 // ================================================================
 // This is like:
 // SELECT * FROM students
@@ -51,7 +51,7 @@ db.students.find({
 
 
 // ================================================================
-// SECTION 11 — USING OR
+// SECTION 2.4 — USING OR
 // ================================================================
 // This is like:
 // SELECT * FROM students
@@ -66,7 +66,7 @@ db.students.find({
 
 
 // ================================================================
-// SECTION 12 — PROJECT ONLY CERTAIN FIELDS
+// SECTION 2.5 — PROJECT ONLY CERTAIN FIELDS
 // ================================================================
 // Projection means choosing which fields to return.
 //
@@ -85,7 +85,7 @@ db.students.find(
 
 
 // ================================================================
-// SECTION 13 — EXCLUDE _id
+// SECTION 2.6 — EXCLUDE _id
 // ================================================================
 // This is useful because MongoDB includes _id automatically.
 db.students.find(
@@ -96,7 +96,7 @@ db.students.find(
 
 
 // ================================================================
-// SECTION 14 — SORT RESULTS
+// SECTION 2.7 — SORT RESULTS
 // ================================================================
 // sort({ age: 1 })  => ascending
 // sort({ age: -1 }) => descending
@@ -108,7 +108,7 @@ db.students.find({}).sort({ age: 1 }).pretty();
 
 
 // ================================================================
-// SECTION 15 — LIMIT RESULTS
+// SECTION 2.8 — LIMIT RESULTS
 // ================================================================
 // Similar to limiting the number of rows returned.
 db.students.find({}).sort({ age: 1 }).limit(3).pretty();
@@ -117,7 +117,7 @@ db.students.find({}).limit(3).sort({ age: 1 }).pretty();
 
 
 // ================================================================
-// SECTION 16 — FIND ONE DOCUMENT
+// SECTION 2.9 — FIND ONE DOCUMENT
 // ================================================================
 // findOne() returns a single matching document.
 db.students.findOne({ name: "Ali" });

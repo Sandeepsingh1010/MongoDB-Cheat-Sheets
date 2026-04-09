@@ -13,7 +13,7 @@
 // ================================================================
 
 // ================================================================
-// SECTION 1 — SELECT A DATABASE
+// SECTION 1.1 — SELECT A DATABASE
 // ================================================================
 // This switches your current database context.
 // If the database does not exist yet, MongoDB will create it once you
@@ -33,7 +33,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 2 — UNDERSTANDING COLLECTIONS
+// SECTION 1.2 — UNDERSTANDING COLLECTIONS
 // ================================================================
 // In SQL, you usually create a table first.
 // In MongoDB, collections are often created automatically when you
@@ -46,7 +46,7 @@ db.getCollectionNames();
 
 
 // ================================================================
-// SECTION 3 — INSERT ONE DOCUMENT
+// SECTION 1.3 — INSERT ONE DOCUMENT
 // ================================================================
 // A document is like a row in SQL, but more flexible.
 // This inserts one student document into the "students" collection.
@@ -73,7 +73,7 @@ db.students.insertOne({
 
 
 // ================================================================
-// SECTION 4 — VIEW DOCUMENTS
+// SECTION 1.4 — VIEW DOCUMENTS
 // ================================================================
 // find() returns all documents in the collection.
 // Similar idea to:
@@ -83,7 +83,7 @@ db.students.find({});
 
 
 // ================================================================
-// SECTION 5 — PRETTY OUTPUT
+// SECTION 1.5 — PRETTY OUTPUT
 // ================================================================
 // pretty() formats the output to make it easier to read.
 db.students.find({}).pretty();
@@ -91,7 +91,7 @@ db.students.find({}).pretty();
 
 
 // ================================================================
-// SECTION 6 — INSERT MANY DOCUMENTS
+// SECTION 1.6 — INSERT MANY DOCUMENTS
 // ================================================================
 // This adds multiple documents at once.
 // Similar idea to inserting multiple rows in SQL.
@@ -133,6 +133,6 @@ db.students.insertMany([
 
 
 // ================================================================
-// SECTION 7 — VERIFY THE DATA
+// SECTION 1.7 — VERIFY THE DATA
 // ================================================================
 db.students.find({}).pretty();

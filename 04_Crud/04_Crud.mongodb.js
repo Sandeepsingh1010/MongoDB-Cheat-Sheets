@@ -12,7 +12,7 @@ use("mongo_course_playground");
 
 
 // ================================================================
-// SECTION 19 — UPDATE ONE DOCUMENT
+// SECTION 4.1 — UPDATE ONE DOCUMENT
 // ================================================================
 // In MongoDB, updates use operators like:
 // - $set    : assign / replace field values
@@ -31,14 +31,14 @@ db.students.updateOne(
 
 
 // ================================================================
-// SECTION 20 — VERIFY THE UPDATE
+// SECTION 4.2 — VERIFY THE UPDATE
 // ================================================================
 db.students.find({ name: "Ali" }).pretty();
 
 
 
 // ================================================================
-// SECTION 21 — INCREMENT A VALUE
+// SECTION 4.3 — INCREMENT A VALUE
 // ================================================================
 // Increase Sara's age by 1.
 // Useful for counters, quantities, scores, etc.
@@ -52,7 +52,7 @@ db.students.find({ name: "Sara" }).pretty();
 
 
 // ================================================================
-// SECTION 22 — ADD A FIELD TO AN EXISTING DOCUMENT
+// SECTION 4.4 — ADD A FIELD TO AN EXISTING DOCUMENT
 // ================================================================
 // MongoDB schema is flexible.
 // Documents in the same collection do not all need the same fields.
@@ -66,7 +66,7 @@ db.students.find({ name: "John" }).pretty();
 
 
 // ================================================================
-// SECTION 23 — REMOVE A FIELD
+// SECTION 4.5 — REMOVE A FIELD
 // ================================================================
 // $unset removes a field from a document.
 db.students.updateOne(
@@ -79,7 +79,7 @@ db.students.find({ name: "John" }).pretty();
 
 
 // ================================================================
-// SECTION 24 — PUSH INTO AN ARRAY
+// SECTION 4.6 — PUSH INTO AN ARRAY
 // ================================================================
 // Add a new skill to Mina's skills array.
 db.students.updateOne(
@@ -92,7 +92,7 @@ db.students.find({ name: "Mina" }).pretty();
 
 
 // ================================================================
-// SECTION 25 — UPDATE MANY DOCUMENTS
+// SECTION 4.7 — UPDATE MANY DOCUMENTS
 // ================================================================
 // This updates all documents matching the filter.
 //
@@ -108,7 +108,7 @@ db.students.find({ major: "Computer Science" }).pretty();
 
 
 // ================================================================
-// SECTION 26 — RENAME FIELDS IN MANY DOCUMENTS
+// SECTION 4.8 — RENAME FIELDS IN MANY DOCUMENTS
 // ================================================================
 // $rename renames a field in documents that have it.
 db.students.updateMany(
@@ -119,7 +119,7 @@ db.students.updateMany(
 
 
 // ================================================================
-// SECTION 27 — DELETE ONE DOCUMENT
+// SECTION 4.9 — DELETE ONE DOCUMENT
 // ================================================================
 // This deletes the first matching document.
 //
@@ -131,7 +131,7 @@ db.students.find({}).pretty();
 
 
 // ================================================================
-// SECTION 28 — DELETE MANY DOCUMENTS
+// SECTION 4.10 — DELETE MANY DOCUMENTS
 // ================================================================
 // This deletes all students who are not enrolled.
 db.students.deleteMany({ enrolled: false });
